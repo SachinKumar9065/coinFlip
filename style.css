@@ -1,0 +1,168 @@
+/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+}
+.name{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: #61dafb;
+}
+.name p{
+    margin: 0;
+    padding: 0;
+}
+.name .dev{
+    font-size: 0.6rem;
+}
+.name .sk{
+    margin-left: 0.8rem;
+    color: yellow;
+    font-weight: 700;
+}
+
+.container {
+    text-align: center;
+    background: #1c1e22;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #61dafb;
+}
+
+button {
+    padding: 1rem 2rem;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 25px;
+    color: #282c34;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+button:hover {
+    background-color: #52c3e0;
+}
+
+button i {
+    margin-right: 0.5rem;
+}
+
+#coin {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    margin: 2rem auto;
+    transform-style: preserve-3d;
+}
+
+#coin div {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    background-size: cover;
+    position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.heads {
+    background-image: url('head.png'); /* Replace with your own head image URL */
+}
+
+.animate-heads {
+    animation: flipHeads 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipHeads {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(1800deg);
+    }
+}
+
+.tails {
+    background-image: url('tail.jpg'); /* Replace with your own tail image URL */
+    transform: rotateY(-180deg);
+}
+
+.animate-tails {
+    animation: flipTails 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipTails {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(1620deg);
+    }
+}
+
+#status {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    #coin {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    #status {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #coin {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    #status {
+        font-size: 1rem;
+    }
+}
